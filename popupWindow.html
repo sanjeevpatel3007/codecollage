@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollage | JS-Combine Projects</title>
+    <link rel="icon" href="./img/fevicon.avif">
+    <link rel="stylesheet" href="style.css">
+    <link href="path/to/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<style>
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        min-width: 100%;
+        height: 92vh;
+        background-color: rgb(110, 176, 207);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container button{
+        background-color: white;
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        border: transparent;
+        border-radius: 25px;
+        position: relative;
+    }
+    .popup{
+        width: 250px;
+        height: auto;
+        padding: 20px;
+        background-color:white;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%,50%) scale(0.1);
+      border-radius: 5px;
+      text-align: center;
+      visibility: hidden;
+   transition: transform 0.4s, top 0.4s ;
+     
+    }
+    .popup img{
+       position: absolute;
+       top: -50px;
+       left: 100px;
+        width: 70px;
+        border-radius: 50%;
+    }
+    .popup button{
+        background-color: rgb(0, 255, 110);
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%,-50%)scale(1);
+    }
+    
+</style>
+<body>
+
+
+    <header>
+
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+
+                        <nav role="navigation">
+                            <ul>
+
+                                <li><a href="index.html" aria-haspopup="true">Home</a>
+                                    <ul class="dropdown" aria-label="submenu">
+                                        <li><a href="index.html#footer">About</a></li>
+                                        <li><a href="index.html#project">Projects</a></li>
+                                        <li><a href="#">Source Code</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="index.html#project"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="index.html#footer"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+
+                            <img class="h-8 w-8 rounded-full"
+                            src="./img/logo.jpg"  alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+     <button type="submit" id="btn" onclick="openpopup()" >Submit</button>
+      
+     <div class="popup" id="popup">
+            <img  id="img" src="./img/fevicon.avif" alt="">
+            <h2>ThankYou !</h2>
+             <p> Your details are  successfully submited ....! thanks!</p>
+             <button type="button" id="okbtn" onclick="closepopup()">OK</button>
+          </div>
+
+
+    </div>
+
+
+
+    <script>
+
+
+        let popup=document.getElementById("popup");
+        // const submit=document.getElementById("btn");
+        // const ok=document.getElementById("okbtn");
+
+       function openpopup(){
+             popup.classList.add("open-popup");
+       }
+       
+       function closepopup(){
+             popup.classList.remove("open-popup");
+       }
+
+    </script>
+</body>
+</html>

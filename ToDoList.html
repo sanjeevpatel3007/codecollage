@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollage | JS-Combine Projects</title>
+    <link rel="icon" href="./img/fevicon.avif">
+    <link rel="stylesheet" href="style.css">
+    <link href="path/to/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.popupWindow{
+    display: block;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(202, 213, 228);
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.popup{
+    display: none;
+}
+#popup p{
+float: right;
+text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    width: 50px;
+    border-radius: 20px;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    
+    /* background: linear-gradient(60deg, #535592, #272247); */
+}
+.container {
+    width: 500px;
+    border-radius: 10px;
+    min-height: 300px;
+    background-color: rgb(249, 247, 247);
+    position: relative;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding:0px 0px 20px 50px;
+    padding-top: 0;
+    box-shadow: 2px 2px 5px  rgb(150, 142, 204), inset 1px 1px 20px  rgb(200, 205, 229);
+   
+}
+
+#headimg {
+    width: 80px;
+}
+
+.todo-app h1 {
+    display: flex;
+    font-size: 30px;
+    padding-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(30, 4, 126);
+    cursor: pointer;
+}
+.todo-app h1 span{
+    color: #973307;
+}
+form {
+    display: flex;
+}
+form input {
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 10px 30px;
+    border: transparent;
+    background-color: rgb(154, 162, 169);
+    border-radius: 70px;
+    width: 60%;
+    border: none;
+    outline: none;
+}
+#addbtn {
+    margin-top: 30px;
+    margin-left: -40px;
+    padding: 10px 30px;
+    border: transparent;
+    background-color: rgb(213, 72, 21);
+    border-radius: 70px;
+    color: aliceblue;
+}
+ul {
+    margin-top: 30px;
+}
+ul li {
+    width: 80%;
+    margin: 8px;
+    list-style: none;
+    background-color: rgb(33, 144, 229);
+    padding: 5px 20px;
+    border-radius: 50px;
+   position: relative;
+} 
+.editbtn{
+    position: absolute;
+    right: 10px;
+}
+.removebtn{
+    position: absolute;
+    right: 70px;
+}
+ul li button{
+   width: 50px;
+}
+ul li{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li::before {
+
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #faf6f4;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    top: 5px;
+    left: -35px;
+}
+ul li.clicked::before {
+
+    background-image: url('./img/checked.jpg');
+}
+ul li.clicked::after {
+    text-decoration: underline;
+}
+.removebtn,
+.editbtn {
+    width: 30px;
+}
+
+
+@media  screen and (max-width:567px) {
+
+    .container {
+    width: 300px;
+    }
+
+
+    form input {
+        /* margin-top: 30px; */
+        margin-left: 0px;
+        padding: 10px 10px;
+        border: transparent;
+        background-color: rgb(53, 99, 134);
+        border-radius: 70px;
+        width: 60%;
+      
+    }
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+    
+    <header>
+
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+
+                        <nav role="navigation">
+                            <ul>
+
+                                <li><a href="index.html" aria-haspopup="true">Home</a>
+                                    <ul class="dropdown" aria-label="submenu">
+                                        <li><a href="index.html#footer">About</a></li>
+                                        <li><a href="index.html#project">Projects</a></li>
+                                        <li><a href="#">Source Code</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="index.html#project"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="index.html#footer"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+
+                          
+                    <img class="h-8 w-8 rounded-full"
+                    src="./img/logo.jpg"  alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+
+        <div class="todo-app">
+            <h1>To-<span>Do</span> List <img id="headimg" src="./img/f1.png" alt=""></h1>
+            <form>
+                <input id="form-input" type="text" placeholder="Write your task">
+                <button id="addbtn" onclick="Addtask()">Add</button>
+            </form>
+            <ul id="list-container">
+                <!-- <li>first</li> -->
+            </ul>
+        </div>
+    </div>
+ <div class="popup" id="popup">
+        
+        <h1> Please enter some text....</h1>
+  <br>
+  <br>
+        <p onclick="popupRemove()">OK</p>
+ </div>
+
+<script src="ToDoList.js"></script>
+</body>
+
+</html>
