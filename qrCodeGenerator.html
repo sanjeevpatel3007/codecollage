@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollage | JS-Combine Projects</title>
+    <link rel="icon" href="./img/fevicon.avif">
+    <link rel="stylesheet" href="style.css">
+    <link href="path/to/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    
+body{
+    width: 100%;
+    background-color: rgb(108, 108, 195);
+    
+}
+.container{
+    width: 30%;
+    margin: auto;
+    padding: 25px 35px;
+    position: absolute;
+    top: 15%;
+   left: 35%;
+    background: #e4e4ec;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 10px rgb(135, 165, 206),2px 2px 10px rgb(61, 40, 120);
+}
+.container p{
+    font-weight: 600;
+    font-size: 25px;
+}
+.container input{
+   width: 100%;
+   height:40px;
+   padding-left: 10px;
+   border: 1px solid #0a0b0b;
+   margin: 10px 0 20px ;
+   border-radius: 5px;
+}
+
+.container button{
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    background-color: #311dad;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px ;
+}
+
+#imgBox{
+    margin: auto;
+    width: 200px;
+    border-radius: 5px;
+     max-height: 0;
+     overflow: hidden; 
+    transition: max-height 1s ;
+    margin-bottom: 30px;
+}
+
+#imgBox img{
+    width: 90%;
+    padding: 10px;
+}
+
+
+#imgBox.show-img{
+    max-height: 300px;
+    border: 1px solid red;
+}
+
+.error{
+    animation: shake 0.2s linear 10;
+   
+    outline: 2px solid red;
+    
+}
+
+@keyframes shake{
+    0% { 
+        transform: translate(0);
+    }
+    25% { 
+        transform: translate(-4px);
+    }
+    50% { 
+        transform: translate(0);
+    }
+    75% { 
+        transform: translate(4px);
+    }
+
+    0% { 
+        transform: translate(0);
+    }
+}
+
+@media  screen and (max-width:567px) {
+
+
+
+    .container{
+        width: 70%;
+        top: 15%;
+       left: 5%;
+    
+    }
+
+
+
+}
+</style>
+
+</head>
+<body>
+
+
+
+    <header>
+
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+
+                        <nav role="navigation">
+                            <ul>
+
+                                <li><a href="index.html" aria-haspopup="true">Home</a>
+                                    <ul class="dropdown" aria-label="submenu">
+                                        <li><a href="index.html#footer">About</a></li>
+                                        <li><a href="index.html#project">Projects</a></li>
+                                        <li><a href="#">Source Code</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="index.html#project"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="index.html#footer"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+
+                           
+                    <img class="h-8 w-8 rounded-full"
+                    src="./img/logo.jpg"  alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+         <p> Enter your text or URL</p>
+         <input id="qrText" type="text" placeholder="Text or URL">
+
+         <div id="imgBox">
+            <img src="" id="qrImage">
+         </div>
+
+         <button id="btn" onclick="generateQR()">Generate QR Code</button>
+    </div>
+
+
+    <script src="qrCodeGenerator.js">
+       
+    </script>
+
+</body>
+</html>

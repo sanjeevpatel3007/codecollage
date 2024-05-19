@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollage | JS-Combine Projects</title>
+    <link rel="icon" href="./img/fevicon.avif">
+    <link rel="stylesheet" href="style.css">
+    <link href="path/to/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Roboto+Condensed:ital,wght@0,200;0,500;1,300&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    body {
+        background-color: rgb(121, 147, 169);
+    }
+
+    .quote-box {
+        background-color: #fff;
+        width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .quote-box h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .quote-box h2::after {
+        content: '';
+        width: 75px;
+        height: 3px;
+        border-radius: 3px;
+        background-color: rgba(23, 124, 229, 1);
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translate(-50%);
+    }
+
+    .quote-box blockquote {
+        min-height: 110px;
+    }
+
+    .quote-box blockquote::before,
+    .quote-box blockquote::after {
+        content: '"';
+    }
+
+    .quote-box span {
+        display: block;
+        margin-top: 10px;
+        float: right;
+        position: relative;
+
+    }
+
+    .quote-box span::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: rgba(23, 124, 229, 1);
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        transform: translate(-50%);
+    }
+    .quote-box div{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-box button{
+        background-color: rgba(23, 124, 229, 1);
+     color: #fff;
+     border-radius: 25px;
+     border: 1px solid  rgba(23, 124, 229, 1);
+     width: 150px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 5px;
+     cursor: pointer;
+
+    }
+    .quote-box button i{
+        margin-right: 5px;
+    }
+    .quote-box button:nth-child(2){
+        background-color: transparent;
+        color:  rgba(23, 124, 229, 1);
+    }
+</style>
+
+</head>
+
+
+<body>
+
+
+
+    <header>
+
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+
+                        <nav role="navigation">
+                            <ul>
+
+                                <li><a href="index.html" aria-haspopup="true">Home</a>
+                                    <ul class="dropdown" aria-label="submenu">
+                                        <li><a href="index.html#footer">About</a></li>
+                                        <li><a href="index.html#project">Projects</a></li>
+                                        <li><a href="#">Source Code</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="index.html#project"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="index.html#footer"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+
+                            <img class="h-8 w-8 rounded-full"
+                            src="./img/logo.jpg"  alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote  id="quote">Loading...</blockquote>
+        <span id="auther">Loading...</span>
+        <div>
+            <button onclick="getquote(api_url)" id="newQuote">New Quote</button>
+            <button onclick="tweet()" id="Tweet"><i class="fa-brands fa-twitter"></i>Tweet</button>
+        </div>
+    </div>
+
+<script>
+    const quote=document.getElementById("quote");
+    const auther=document.getElementById("auther");
+    const api_url="https://api.quotable.io/random";
+   
+    async function getquote(url){
+         const response=await fetch(url);
+         var data= await response.json();
+        //  console.log(data);
+         quote.innerHTML=data.content;
+         auther.innerHTML=data.auther;
+    }
+    getquote(api_url);
+    function tweet(){
+        
+        window.open("https://twitter.com/intent/tweet?text=Hello%20world" , "tweet window", "width=600, height=300");
+    }
+</script>
+
+</body>
+</html>

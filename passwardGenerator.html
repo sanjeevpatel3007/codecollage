@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollage | JS-Combine Projects</title>
+    <link rel="icon" href="./img/fevicon.avif">
+    <link rel="stylesheet" href="style.css">
+    <link href="path/to/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+    body {
+    /* background-color: rgb(134, 134, 197); */
+    /* background-color: linear-gra; */
+    /* background: linear-gradient(left-to, red,black); */
+    background: linear-gradient(to right, #585655, #9f9d9c, #dbdbdb);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+
+    padding: 30px;
+    width: 300px;
+    position: relative;
+    top: 150px;
+    left: 100px;
+
+    border: 1px solid;
+    border-image: linear-gradient(to right, #000000, #4a4949, #858383);
+    border-image-slice: 3;
+    border-right: none;
+}
+
+.container p {
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+.container span {
+    color: rgb(18, 180, 139);
+    text-decoration: underline;
+
+
+}
+
+.container input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: none;
+}
+
+.container button {
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    background-color: rgb(18, 180, 139);
+    border: none;
+    color: white;
+}
+
+#copy {
+    position: relative;
+    right: 30px;
+    top: 5px;
+}
+
+@media screen and (max-width:567px) {
+
+    .container {
+
+        padding: 30px;
+        width: 300px;
+        position: relative;
+        top: 150px;
+        left: 100px;
+    
+        border: 1px solid;
+        border-image: linear-gradient(to right, #000000, #7a7979, #cac4c4);
+        border-image-slice: 3;
+        border-right: none;
+    }
+    
+
+    .container input {
+        width: 60%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        border: none;
+    }
+}
+</style>
+
+</head>
+
+
+
+
+<body>
+
+    <header>
+
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+
+                        <nav role="navigation">
+                            <ul>
+
+                                <li><a href="index.html" aria-haspopup="true">Home</a>
+                                    <ul class="dropdown" aria-label="submenu">
+                                        <li><a href="index.html#footer">About</a></li>
+                                        <li><a href="index.html#project">Projects</a></li>
+                                        <li><a href="#">Source Code</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="index.html#project"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="index.html#footer"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+
+                           
+                    <img class="h-8 w-8 rounded-full"
+                    src="./img/logo.jpg"  alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+        <p>Generate a <br>
+            <span> Random Password</span>
+        </p>
+
+        <input id="password" type="text">
+        <i id="copy" onclick="copypassword()" class="fa-regular fa-copy"></i>
+        <br>
+        <button btn onclick="generatePassword()"><i class="fa-solid fa-bolt"></i> Generate Password</button>
+    </div>
+
+    <script src="passwardGenerator.js">
+
+    </script>
+
+</body>
+
+</html>
