@@ -27,52 +27,52 @@ Each mini project is designed to highlight different web development skills and 
 ### 1. Calculator
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A calculator for basic arithmetic operations with a user-friendly interface.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/calculator.html)
 
 ### 2. Notification Bar | PopUp Window
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A popup window and notification popup. The popup displays content on top of the webpage, while the notification shows temporary alerts.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/popupWindow.html)
 
 ### 3. Digital Clock
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A digital clock using the Date() method to fetch and display the current time. Styled with Tailwind CSS for a sleek appearance.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/clock.html)
 
 ### 4. Echno-Web | Bootstrap WebPage
 **Technology:** HTML, Tailwind CSS  
 **Description:** A visually engaging webpage crafted with HTML, Tailwind CSS, and Bootstrap, featuring responsive design and smooth navigation.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 5. Photo Search API
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A photo search tool utilizing an API to fetch photos based on user queries. Designed with an intuitive UI and search functionality.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 6. Gallery Slider
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A gallery slider displaying images in a slideshow format. Users can navigate through images using arrows or thumbnails.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 7. Random Password Generator
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A customizable password generator allowing users to specify length and character types.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 8. QR Code Generator
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A QR code generator using an API to create QR codes based on user input, with a user-friendly interface.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 9. Random Quotes Generator
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A random quote generator fetching quotes dynamically via an API, with an option to share on Twitter.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ### 10. To-Do List
 **Technology:** HTML, CSS, Tailwind CSS, JavaScript  
 **Description:** A to-do list application allowing users to add, remove, and mark tasks as completed.  
-**Preview:** [View Project](#)
+**Preview:** [View Project](https://sanjeevpatel3007.github.io/codecollage/)
 
 ## View Source Code
 
